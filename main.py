@@ -8,5 +8,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-    message=input("rentrer :")
+    message = input("rentrer :")
     print(message)

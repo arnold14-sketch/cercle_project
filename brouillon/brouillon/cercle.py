@@ -71,7 +71,6 @@ def demander_entier(
 
 
 """    
-
 """
 
 

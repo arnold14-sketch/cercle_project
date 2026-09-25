@@ -1,7 +1,9 @@
 from typing import Any
+
+
 def main() -> None:
 
-    cercles: dict[str, dict[str,Any]] = {}
+    cercles: dict[str, dict[str, Any]] = {}
 
     while True:
         afficher_menu()
@@ -21,5 +23,7 @@ def main() -> None:
         elif choix == 5:
             afficher_tous_les_cercles(cercles)
 
-def demander_entier(message: str, minimum: int | None = None, maximum: int | None = None) -> int:
-    ...#signifie ne fait rien (il va falloir faire du dev) contrairement à pass qui signifie 
+
+def demander_entier(
+    message: str, minimum: int | None = None, maximum: int | None = None
+) -> int: ...  # signifie ne fait rien (il va falloir faire du dev) contrairement à pass qui signifie

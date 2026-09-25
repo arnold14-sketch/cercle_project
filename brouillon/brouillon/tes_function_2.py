@@ -1,8 +1,7 @@
+from etape3.cercle import creation_cercle
+from abc import abstractmethod,ABC
 from typing import Any
-import pytest
-from src.etape2.etape_2_1 import cercle,demander_entier,creation_cercle,ajout_membre,suppression_membre
-import src.etape2.etape_2_1 as etape
-
+from etape3.employe import creation_membre
 
 
 #creation de mes jeux de données test
@@ -202,5 +201,3 @@ def test_function_demande_entier_type_invalide(monkeypatch: pytest.MonkeyPatch):
     
 
         
-
-
