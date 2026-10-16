@@ -8,6 +8,7 @@ dependencies = [
     "graphviz>=0.21",
     "pip>=26.1.2",
     "pydeps>=3.0.7",
+    "pytest>=9.0.2",
 ]
 
 [dependency-groups]

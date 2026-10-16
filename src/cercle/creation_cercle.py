@@ -1,5 +1,6 @@
-from src.etape3.functions_all import function, function_utils
-from src.etape3.employe.creation_membre import membre
+from functions import adaptators
+from functions import utils
+from membre.creation_membre import membre
 
 
 class cercle:
@@ -93,19 +94,19 @@ class director_cercle:
         MIN_MEMBRES = 3
         MAX_MEMBRES = 8
         i = 1
-        nom_cercle = function.normaliser_nom(
-            function.demander_nom("Quel est le nom du cercle :  ")
+        nom_cercle = utils.normaliser_nom(
+            utils.demander_nom("Quel est le nom du cercle :  ")
         )
         # if function_utils.cercle_existe()
         self._builder.creation_nom(nom_cercle)
-        new_leader = function_utils.generer_leader_cercle()
+        new_leader = adaptators.generer_leader_cercle()
         self._builder.creation_leader(new_leader)
-        total_membres = function.demander_entier(
+        total_membres = utils.demander_entier(
             f"Nombre total de membres ({MIN_MEMBRES}-{MAX_MEMBRES}) : ",
             MIN_MEMBRES,
             MAX_MEMBRES,
         )
         while i < total_membres:
-            new_membre = function_utils.generer_membre_ordinaire()
+            new_membre = adaptators.generer_membre_ordinaire()
             self._builder.creation_membre(new_membre)
             i += 1

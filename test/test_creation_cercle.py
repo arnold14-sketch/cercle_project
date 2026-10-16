@@ -1,5 +1,5 @@
-from src.etape3.cercle import creation_cercle
-from src.etape3.employe import creation_membre
+from cercle import creation_cercle
+from membre import creation_membre
 import pytest
 
 #creation de mes jeux de données test

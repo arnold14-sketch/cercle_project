@@ -10,6 +10,7 @@ dependencies = [
     { name = "graphviz" },
     { name = "pip" },
     { name = "pydeps" },
+    { name = "pytest" },
 ]
 
 [package.dev-dependencies]
@@ -25,6 +26,7 @@ requires-dist = [
     { name = "graphviz", specifier = ">=0.21" },
     { name = "pip", specifier = ">=26.1.2" },
     { name = "pydeps", specifier = ">=3.0.7" },
+    { name = "pytest", specifier = ">=9.0.2" },
 ]
 
 [package.metadata.requires-dev]

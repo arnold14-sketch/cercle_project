@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from src.etape3.functions_all import function
+from functions import utils
 
 
 
@@ -102,10 +102,10 @@ class builder_creation_membre_ordinaire(builder_creation_membre):
 
     def creation_identite(self) -> None:
 
-        nom_membre = function.normaliser_nom(
-            function.demander_nom("Quel est le nom du membre : ")
+        nom_membre = utils.normaliser_nom(
+            utils.demander_nom("Quel est le nom du membre : ")
         )
-        prenom_membre = function.demander_nom("Quel est le prenom du membre : ")
+        prenom_membre = utils.demander_nom("Quel est le prenom du membre : ")
         self._membre_ordinaire.assigner_identite_membre(nom_membre, prenom_membre)
 
     def creation_role_membre(self) -> None:
@@ -135,12 +135,12 @@ class builder_creation_membre_leader(builder_creation_membre):
 
     def creation_identite(self) -> None:
 
-        nom = function.normaliser_nom(
-            function.demander_nom("Quel est le nom du leader : ")
+        nom = utils.normaliser_nom(
+            utils.demander_nom("Quel est le nom du leader : ")
         )
-        nom = function.normaliser_nom(nom)
-        prenom = function.demander_nom("Quel est le prenom du leader : ")
-        prenom = function.normaliser_nom(prenom)
+        nom = utils.normaliser_nom(nom)
+        prenom = utils.demander_nom("Quel est le prenom du leader : ")
+        prenom = utils.normaliser_nom(prenom)
 
         self._membre_leader.assigner_identite_membre(nom, prenom)
 

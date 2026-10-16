@@ -1,6 +1,6 @@
-from src.etape3.cercle import creation_cercle
+from cercle import creation_cercle
 from abc import abstractmethod, ABC
-from src.etape3.employe import creation_membre
+from membre import build_membre
 
 
 class sauvegarde(ABC):
@@ -43,12 +43,12 @@ class sauvegarde_cercle(sauvegarde):
 
 
 class sauvegarde_membre(sauvegarde):
-    membres: creation_membre.membre = []
+    membres: build_membre.membre = []
 
     def __init__(self, liste_membres: list):
         self._liste_membres = liste_membres
 
-    def save(self, m: creation_membre.membre):
+    def save(self, m: build_membre.membre):
 
         self._liste_membres.append(m)
         print("Sauvegarde du membre effectuée")

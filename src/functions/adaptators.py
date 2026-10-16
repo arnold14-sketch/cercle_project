@@ -1,7 +1,7 @@
 from cercle import creation_cercle
 
-from src.etape3.employe import creation_membre
-from src.etape3.functions_all import function
+from membre import creation_membre
+from functions import utils
 
 
 def generer_membre_ordinaire() -> creation_membre.membre:
@@ -77,7 +77,7 @@ def ajouter_membre(cercles: list[creation_cercle.cercle]):
     if not len(cercles) < 1:
         print("\n--- LISTE DES CERCLES---\n-")
         afficher_nom_tous_les_cercles(cercles)
-        valeur = function.demander_entier(
+        valeur = utils.demander_entier(
             "Entrer le numero du cercle correspondant : ", 1, len(cercles)
         )
         membre_ordinaire = generer_membre_ordinaire()
@@ -93,7 +93,7 @@ def retirer_membre(cercles: list[creation_cercle.cercle]):
     if not len(cercles) < 1:
         print("\n--- LISTE DES CERCLES---\n-")
         afficher_nom_tous_les_cercles(cercles)
-        valeur = function.demander_entier(
+        valeur = utils.demander_entier(
             "Entrer le numero du cercle correspondant : ", 1, len(cercles)
         )
         cercle = cercles[valeur - 1]
@@ -105,7 +105,7 @@ def retirer_membre(cercles: list[creation_cercle.cercle]):
             i += 1
 
         if not len(liste_membres) < 4:
-            valeur2 = function.demander_entier(
+            valeur2 = utils.demander_entier(
                 "Entrer le numero du membre correspondant : ", 1, len(liste_membres)
             )
             cercle._cercle_informations["Liste_des_membres"].pop(valeur2)
@@ -120,8 +120,8 @@ def retirer_membre(cercles: list[creation_cercle.cercle]):
 def rechercher_cercle(cercles: list[creation_cercle.cercle]):
 
     if not len(cercles) < 1:
-        nom_cercle = function.demander_nom("Quel est le nom du cercle : ")
-        nom_cercle = function.normaliser_nom(nom_cercle)
+        nom_cercle = utils.demander_nom("Quel est le nom du cercle : ")
+        nom_cercle = utils.normaliser_nom(nom_cercle)
 
         index = 0
         for cercle in cercles:

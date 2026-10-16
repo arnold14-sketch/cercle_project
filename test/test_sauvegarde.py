@@ -1,6 +1,6 @@
-from src.etape3.cercle import creation_cercle
-from src.etape3.employe import creation_membre
-from src.etape3.save_functions import sauvegarde
+from cercle import creation_cercle
+from membre import creation_membre
+from persistance import sauvegarde
 import pytest
 
 #creation de mes jeux de données test
